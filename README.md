@@ -31,7 +31,7 @@ nohup flask run --host=0.0.0.0 -p 5000 > flask.log 2>&1 &
 如果需要公网访问架设的聊天服务，请将 index.js 中相关ip改为你的服务器ip
 
 ## 训练数据
-清洗自 https://github.com/yangjianxin1/GPT2-chitchat 中的100w聊天语料，以及 https://github.com/codemayq/chinese_chatbot_corpus 中的贴吧及电视剧对白语料，仅保留3段以上的对话。请前往 [百度网盘]() 密码:？？ 下载解压后存入data文件夹下
+清洗自 https://github.com/yangjianxin1/GPT2-chitchat 中的100w聊天语料，以及 https://github.com/codemayq/chinese_chatbot_corpus 中的贴吧及电视剧对白语料，仅保留3段以上的对话。请前往 [百度网盘](https://pan.baidu.com/s/1hUHtzIxZS4U6GGuE4TrEtw) 提取码:7rm7 下载解压后存入data文件夹下
 
 ## 训练代码
 改自huggingface源码 https://github.com/huggingface/transformers/blob/master/examples/pytorch/language-modeling/run_clm.py
