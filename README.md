@@ -11,6 +11,19 @@ python3 chat.py
 即可和聊天机器人交互
 
 
+## 对话网页
+改自项目：https://github.com/sylviapap/chatbot 
+对话网页可以提供更友好的AI，运行这部分代码可以快速部署AI聊天机器人服务
+首先，开启flask服务
+
+```bash
+cd chat_web
+export FLASK_APP=chat_server
+nohup flask run --host=0.0.0.0 -p 5000 > flask.log 2>&1 &
+```
+点开 index.html就可以看到可交互网页了
+如果需要公网访问架设的聊天服务，请将 index.js 中相关ip改为你的服务器ip
+
 ## 训练数据
 清洗自 https://github.com/yangjianxin1/GPT2-chitchat 中的100w聊天语料，以及 https://github.com/codemayq/chinese_chatbot_corpus 中的贴吧及电视剧对白语料，仅保留3段以上的对话。请前往 [百度网盘]() 密码:？？ 下载解压后存入data文件夹下
 
@@ -26,16 +39,6 @@ python3 run_clm.py \
     --overwrite_output_dir
 ```
 
-## 对话网页
-改自项目：https://github.com/sylviapap/chatbot 
-首先，开启flask服务
-
-```bash
-cd chat_web
-export FLASK_APP=chat_server
-nohup flask run --host=0.0.0.0 -p 5000 > flask.log 2>&1 &
-```
-点开 index.html就可以看到可交互网页了
 
 ## 技术细节
 采用GPT-2训练，训练数据格式如下
