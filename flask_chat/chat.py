@@ -18,7 +18,7 @@ from semantic_sort import Semantic_sort
 class Generator():
     def __init__(self) -> None:
         # set_seed(42)
-        model_cache = "../cache/checkpoint-15500"
+        model_cache = "../cache/checkpoint-download"
         self.tokenizer = AutoTokenizer.from_pretrained(model_cache)
         self.model = AutoModelForCausalLM.from_pretrained(model_cache)# .cuda() 暂不用显卡
         self.semantic = Semantic_sort().sem_sort
