@@ -13,7 +13,11 @@ python3 chat.py
 
 ## 对话网页
 改自项目：https://github.com/sylviapap/chatbot 
+
+
 对话网页可以提供更友好的AI，运行这部分代码可以快速部署AI聊天机器人服务
+
+
 首先，开启flask服务
 
 ```bash
@@ -22,6 +26,8 @@ export FLASK_APP=chat_server
 nohup flask run --host=0.0.0.0 -p 5000 > flask.log 2>&1 &
 ```
 点开 chat_web/index.html就可以看到可交互网页了
+
+
 如果需要公网访问架设的聊天服务，请将 index.js 中相关ip改为你的服务器ip
 
 ## 训练数据
@@ -47,6 +53,8 @@ python3 run_clm.py \
 [CLS]你好啊[SEP]你好[SEP]吃了[SEP]那我们一起出去玩吧[SEP]
 ```
 推断过程根据用户输入采样30条回应（topp采样），这个回应将通过roberta模型与用户发言进行语义排序，希望选择语义相似度最高的句子。
+
+
 与此同时，计算用户发言和候选语句jaccard相似度，将语义相似度 + （1 - jaccard相似分）就得到机器回复的排序。选择最高排序结果返回。
 
 TODO： 完善依赖，测试环境
