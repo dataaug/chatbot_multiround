@@ -1,8 +1,9 @@
 # 多轮对话机器人
-### 提供训练数据，训练代码，推断代码以及可交互的网页
+### 该仓库提供训练数据，训练代码，推断代码以及可交互的网页
+### 多轮中文聊天机器人，采用GPT2进行微调，清洗聊天数据110w+，采用语义相似度和文本jaccard相似度过滤回话。
 
-## 推断代码
-下载训练了10轮的模型， [百度网盘]() 密码:？？， 解压后存入cache，执行以下命令
+## 推断代码 （快速开始）
+训练好的模型暂不开源， 将训练后的模型后存入cache，执行以下命令
 ```bash
 cd chat_web
 python3 chat.py
@@ -26,8 +27,16 @@ python3 run_clm.py \
 ```
 
 ## 对话网页
-来自项目： 
+改自项目：https://github.com/sylviapap/chatbot 
+首先，开启flask服务
+
+```bash
+cd chat_web
+export FLASK_APP=chat_server
+nohup flask run --host=0.0.0.0 -p 5000 > flask.log 2>&1 &
+```
+点开 index.html就可以看到可交互网页了
 
 
-TODO： 完善文档， 完善flask搭建（本地搭建），完善依赖
+TODO： 完善依赖
 
