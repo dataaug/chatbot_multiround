@@ -17,11 +17,11 @@ python3 chat.py
 首先，开启flask服务
 
 ```bash
-cd chat_web
+cd flask_chat
 export FLASK_APP=chat_server
 nohup flask run --host=0.0.0.0 -p 5000 > flask.log 2>&1 &
 ```
-点开 index.html就可以看到可交互网页了
+点开 chat_web/index.html就可以看到可交互网页了
 如果需要公网访问架设的聊天服务，请将 index.js 中相关ip改为你的服务器ip
 
 ## 训练数据
